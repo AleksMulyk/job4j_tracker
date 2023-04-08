@@ -5,12 +5,22 @@
 
 <module name="Checker">
 
+    <!--Кодировка файлов должна быть UTF-8                -->
+    <property name="charset" value="UTF-8"/>
+
     <!--Расширение файла должно быть java, properties, xml-->
     <property name="fileExtensions" value="java, properties, xml"/>
 
     <!-- Checks for Size Violations.                    -->
     <!-- See http://checkstyle.sf.net/config_sizes.html -->
     <module name="FileLength"/>
+
+    <!-- Line length. Default: 80 lines                 -->
+    <!-- See http://checkstyle.sf.net/config_sizes.html -->
+    <module name="LineLength">
+        <property name="fileExtensions" value="java"/>
+        <property name="max" value="120"/>
+    </module>
 
     <!-- Checks for Headers                                -->
     <!-- See http://checkstyle.sf.net/config_header.html   -->
@@ -20,6 +30,15 @@
     <!-- </module> -->
 
     <module name="TreeWalker">
+        <!-- Проверяет порядок расположения элементов в классе                          -->
+        <!-- See https://checkstyle.sourceforge.io/config_coding.html#DeclarationOrder  -->
+        <!--<module name="DeclarationOrder"/>                                           -->
+        <module name="DeclarationOrder"/>
+
+        <!-- Проверяет модификаторы доступа членов класса                               -->
+        <!-- See https://checkstyle.sourceforge.io/checks.html                          -->
+        <!--<module name="VisibilityModifier"/>-->
+        <module name="VisibilityModifier"/>
 
         <module name="EmptyLineSeparator"> <!-- Java Style Guide: Source file structure -->
             <property name="tokens" value="
@@ -50,7 +69,14 @@
             <property name="tokens" value="METHOD_DEF"/>
             <property name="max" value="100"/>
         </module>
-        <module name="ParameterNumber"/>
+
+        <!-- Checks for amount variables                    -->
+        <!-- See http://checkstyle.sf.net/config_sizes.html -->
+        <!-- <module name="ParameterNumber">                -->
+        <module name="ParameterNumber">
+            <property name="max" value="8"/>
+            <property name="tokens" value="METHOD_DEF"/>
+        </module>
 
         <!-- Checks for whitespace                               -->
         <!-- See http://checkstyle.sf.net/config_whitespace.html -->
