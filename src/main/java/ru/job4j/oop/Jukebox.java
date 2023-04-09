@@ -2,12 +2,16 @@ package ru.job4j.oop;
 
 public class Jukebox {
     public void music(int position) {
-        if (position == 1) {
-            System.out.println("Pust begut neukluge");
-        } else if (position == 2) {
-            System.out.println("Spokoinoy nochi");
-        } else {
-            System.out.println("Song have not fined");
+        switch (position) {
+            case 1:
+                System.out.println("Pust begut neukluge");
+                break;
+            case 2:
+                System.out.println("Spokoinoy nochi");
+                break;
+            default:
+                System.out.println("Song have not fined");
+                break;
         }
     }
 
