@@ -29,9 +29,9 @@ public class Car {
 
     public class TripComputer {
 
-        public String tripData = "On-board computer";
+        private String tripData = "On-board computer";
 
-        public String model = "Model TripComputer";
+        private String model = "Model TripComputer";
 
         public void getInfo() {
             System.out.println("Brand: " + brand);
