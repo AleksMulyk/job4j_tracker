@@ -10,7 +10,6 @@ public class User {
     }
 
     public boolean canDrive() {
-        //age = 16;
         return this.age >= 18;
     }
 
