@@ -1,0 +1,20 @@
+package ru.job4j.format;
+
+import java.util.Calendar;
+
+public class Format {
+
+    public static void getGreeting(String name, int age) {
+        System.out.println(String.format("Hello! I am %s, my age is %d.", name, age));
+    }
+
+    public static void getGreetingAndTime(String name) {
+        Calendar instance = Calendar.getInstance();
+        System.out.println(String.format("Hello, %s! Current date: %tF, Current time: %tT", name, instance, instance));
+    }
+
+    public static void main(String[] args) {
+        getGreeting("Elena", 25);
+        getGreetingAndTime("Elena");
+    }
+}
