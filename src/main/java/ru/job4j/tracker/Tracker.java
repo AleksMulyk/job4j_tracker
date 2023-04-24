@@ -46,6 +46,9 @@ public class Tracker {
     }
 
     public boolean replace(int id, Item item) {
+        if (id - 1 > size || id - 1 < 0) {
+            return false;
+        }
         int index = indexOf(id);
         boolean rsl = index != -1;
         if (rsl) {
@@ -56,6 +59,9 @@ public class Tracker {
     }
 
     public boolean delete(int id) {
+        if (id - 1 > size || id - 1 < 0) {
+            return false;
+        }
         int index = indexOf(id);
         boolean rsl = index != -1;
         if (rsl) {
