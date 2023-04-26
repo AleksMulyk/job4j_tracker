@@ -1,4 +1,4 @@
-package enumeration;
+package ru.job4j.enumeration;
 
 public enum Status {
     ACCEPTED("Accepted") {

@@ -1,4 +1,4 @@
-package enumeration;
+package ru.job4j.enumeration;
 
 public class Order {
     private int number;

@@ -1,4 +1,4 @@
-package record;
+package ru.job4j.record;
 
 import java.util.Objects;
 

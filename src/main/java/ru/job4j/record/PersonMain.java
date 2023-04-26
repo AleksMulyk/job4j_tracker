@@ -1,4 +1,4 @@
-package record;
+package ru.job4j.record;
 
 public class PersonMain {
     public static void main(String[] args) {
