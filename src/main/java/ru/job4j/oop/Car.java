@@ -27,6 +27,12 @@ public class Car {
         }
     }
 
+    public static TripComputer getTripComputer() {
+        Car car = new Car("Toyota", "Camry");
+        Car.TripComputer tripComputer = car.new TripComputer();
+        return tripComputer;
+    }
+
     public class TripComputer {
 
         private String tripData = "On-board computer";
@@ -38,12 +44,6 @@ public class Car {
             System.out.println("Model: " + model);
             System.out.println("Model TripComputer: " + this.model);
             System.out.println("Model Car: " + Car.this.model);
-        }
-
-        public static TripComputer getTripComputer() {
-            Car car = new Car("Toyota", "Camry");
-            Car.TripComputer tripComputer = car.new TripComputer();
-            return tripComputer;
         }
     }
 }
