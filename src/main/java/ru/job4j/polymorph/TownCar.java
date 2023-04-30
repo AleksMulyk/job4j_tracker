@@ -26,4 +26,9 @@ public class TownCar implements Vehicle {
     public void refill() {
         System.out.println("Refill 60 L gas");
     }
+
+    @Override
+    public void chargeBattery() {
+        Vehicle.super.chargeBattery();
+    }
 }
