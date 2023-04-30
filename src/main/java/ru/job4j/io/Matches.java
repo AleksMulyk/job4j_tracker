@@ -12,7 +12,7 @@ public class Matches {
             String player = turn ? "First Player" : "Second Player";
             System.out.println(player + " put number in from 1 to 3:");
             int matches = Integer.parseInt(input.nextLine());
-            if (matches > 0 && matches < 4 && matches <= count) {
+            if (matches > 0 && matches <= Math.min(3, count)) {
                 count -= matches;
                 turn = !turn;
                 System.out.println("Balance: " + count);
